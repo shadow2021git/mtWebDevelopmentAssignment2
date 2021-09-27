@@ -1,0 +1,218 @@
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #9c988e;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.header h1 {
+    font-size: 150px;
+    font-family: 'Franklin Gothic heavy';
+    padding: 10px;
+    margin: 10px;
+    color: #fca103;
+}
+
+.header h3 {
+    font-size: 35px;
+    font-family: Helvetica;
+    padding: 10px;
+    margin: 10px;
+    color: #black;
+}
+
+.menu-bar {
+    background-color: #706e69;
+    text-align: center;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style-type: none;
+    color: black;
+    padding: 0px;
+}
+
+.menu-bar ul li {
+    width: 110px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 15px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: #fca103;
+    border-radius: 4px;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: #d3ceb5;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 8px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #9c988e;
+    background: transparent;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li :last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: rgb(56, 6, 194);
+    padding: 10px;
+    font-family: 'Franklin Gothic heavy';
+}
+
+.sub-menu-2 {
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: #fca103;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+h2 {
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+    background-color: #9c988e;
+    padding: 8px;
+}
+
+.div-1 {
+    border: 3px solid #fca103;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #9c988e;
+    font-size: 15px;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 40px;
+    background-color: #9c988e;
+    font-family: -'Segoe UI';
+    text-align: center;
+    padding: 40px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid black;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 5px solid red;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
